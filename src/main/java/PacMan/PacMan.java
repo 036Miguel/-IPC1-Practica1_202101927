@@ -110,10 +110,6 @@ public class PacMan {
                 if(multi==0){
                    multi=1;
                 }
-                if(puntaje<=0||puntaje>=100){
-                    puntaje=10;
-                    movimientos=0;
-                }
                 sup = "---------------------------------------------\n"
                         +nombre + " - " + carnet + " - IPC1 A\n"+"Puntaje: "+puntaje+" - "+"Movimientos:"+movimientos+
                              "\n" + "---------------------------------------------";
@@ -262,6 +258,10 @@ public class PacMan {
                             String nummov=Integer.toString(movimientos);
                              hist[m][3]=nummov;
                                 m++;
+                    }
+                    if(puntaje<=0||puntaje>=100||mov.equalsIgnoreCase("M")){
+                        puntaje=10;
+                        movimientos=0;
                     } 
                 }
                 
